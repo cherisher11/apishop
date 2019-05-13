@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!-- 关于防sql注入 其中查阅#{}与${}的区别  发现#{}能有效防止sql注入，所以下面均使用#{} -->
+	<mapper namespace="com.mapper.userMapper" >
+	    <insert id="adduser" parameterType="User" >
+	        insert into user (USERNAME,PASSWORD,name,telnumber,rid) values(#{username},#{password},#{name},#{telnumber},#{rid})     
+	    </insert>
+	    <delete id="deleteuser" parameterType="User"  >
+	        delete from user where id= #{id}   
+	    </delete>
+	    <select id="getuser" parameterType="_int" resultType="User">
+	        select * from   user  where id= #{id}    
+	    </select>
+		 <select id="findUserByNameAndPwd"  parameterType="Map"  resultType="User" >
+		 select * from user  where username=#{name} and password=#{password}
+	    </select>
+	     <select id="findByTel"  parameterType="User"  resultType="User" >
+		 select * from user  where telnumber=#{telnumber} 
+	    </select>
+	    <update id="updateuser" parameterType="User" >
+	        update  user  set
+	       rid=#{rid}
+	        where id= #{id}  
+	    </update>
+	    <update id="updateuser_name" parameterType="User" >
+	        update  user  set
+	       username=#{username},
+	       name=#{name}
+	        where id= #{id}  
+	    </update>
+	      <update id="updatepwd" parameterType="User" >
+	        update  user  set
+	        PASSWORD=#{password}
+	        where telnumber= #{telnumber}  
+	    </update>
+	    <select id="userlist" resultType="User" >
+	        select * from   user    
+	    </select>	    
+	</mapper>
+

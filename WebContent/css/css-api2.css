@@ -1,0 +1,653 @@
+@charset "utf-8";
+/* API商店 */
+* {
+    margin: 0;
+    padding: 0;
+	font-style:block;
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	position:relative;
+	font-size:20%;
+	min-width:300px;
+	overflow-x:hidden;
+    width:100%;
+
+	
+}
+img
+{
+   width:100%;
+   height:100%;
+}
+li {
+    list-style: none;
+}
+p{
+	margin:0 ;padding:0;
+}
+a{
+	text-decoration:none;
+}
+/*网站顶部*/
+.header {
+	position:absolute;
+	left:0;
+	top:0;
+	margin：0 ;padding:0;
+	background-color:#000;
+	height:50px;
+	width: 100%;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+	border-bottom-width:thin;
+  vertical-align:middle;
+
+}
+.header div{
+    display: inline-block;
+}
+.header .name {
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	widht:20%;
+	min-width:10%;
+	margin:0 auto;
+	float:left;
+ 
+
+}
+.header .name p {
+	margin-left:0.5em;
+	margin-right:2.2em;
+	font-family:"Times New Roman", Times, serif;
+	font-size:10em;
+	text-align:center;
+	line-height:2em;
+	height: 100%;
+}
+.header .choose {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:20%;
+	height:100%;
+	width:100%;
+	margin:0 auto;
+	float:left;
+
+
+	
+}
+
+.header .choose  .view {
+	position:absolute;
+	left:6em;
+	top:0;
+	margin-left:2em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;    
+	min-width:30%;
+	width:100%;
+	height: 100%;
+	float:left;
+	text-align:center;
+	font-size:5.5em;
+}
+.header .choose .view li {
+	margin-top:1.5em;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+}
+.header .choose .view a{
+	color:#000;
+}
+.header .choose .view .on{
+	color:#0CC;
+}
+
+.header .choose .view a:hover {
+	color:#0CC;
+}
+.header .choose .userlogin {
+	width:30%;
+	position:absolute;
+	right:0;
+	top:0;
+	min-width:50em;
+	height: 100%;
+	float:right;
+	text-align:center;
+	line-height:1.8em;
+	font-size:8em;
+	min-width:15%;
+
+	
+}
+.header .choose  .userlogin li {
+	float:left;
+	width:40%;
+	height:90%;
+	margin-right:0%;
+
+}
+
+.header .choose .userlogin li #login {
+	height:80%;
+	width:70%;
+	border:none;
+	background-color:#FFF; 
+	border-style: solid;
+	border-color:#000;
+	border-width:thin;
+    
+}
+.header .choose .userlogin li #login:hover {
+	background-color:#000;
+	color:#FFF; 
+	
+}
+
+.header .choose .userlogin li #register {
+	height:80%;
+	width:70%;
+	border:none;
+	background-color:#FFF;
+	border-style: solid;
+	border-color:#000;
+	border-width:thin;
+
+}
+.header .choose .userlogin li #register:hover {
+	background-color:#000;
+	color:#FFF; 
+	
+}
+
+
+/*主要内容*/
+.wrap img{
+	width:100%;
+	height:100%;
+}
+.wrap {
+	height:400px;
+	width:900px;
+	margin:20px auto;
+	position:relative;
+	overflow:hidden;
+}
+.wrap ul {
+	position:absolute;
+}
+.wrap ul li {
+	height:400px;
+}
+.wrap ol {
+	position:absolute;
+	margin-left:0 auto;
+	bottom:8px;
+}
+.wrap ol li {
+	height:20px;
+	width:20px;
+	background:#ddd;
+	border:1px solid #969591;
+	border-radius:50%;
+	margin-left:3px;
+	color:#959490;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+}
+.wrap ol .on {
+	background:#8F9E9E;
+	color:#fff;
+}
+.contain{
+	padding-top:60px;
+	width:80%;
+	height:1000px;
+	margin:0 auto;
+}
+/*推荐API*/
+
+
+/*推荐数据包*/
+.popular-database{
+	
+	
+}
+
+/* 底部导航 */
+.footer {
+ 
+	border-top-style: solid;
+	border-top-color: #999;
+}
+
+.footer-content {
+    width: 85%;
+    margin: 0 auto;
+	
+	}
+.footer-content ul {
+	margin-top:2em;
+    float: left;
+    width: 20%;
+	
+    text-align: center;
+	margin-bottom:1.5rem;
+}
+.footer-content ul li {
+    font-size: 1rem;  
+    line-height: 1.5rem;
+	
+}
+.footer-content ul li  a{
+	font-family:Georgia, "Times New Roman", Times, serif;
+    text-decoration:none;
+	color:#000;	}
+.footer-content ul li.title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+	font-family:"Courier New", Courier, monospace;
+}
+/* 网站底部 */
+footer{
+	float:left;
+	width: 100%;
+    padding: 0rem 0 1rem;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-top-color: #999;
+	border-right-color: #999;
+	border-bottom-color: #999;
+	border-left-color: #999;
+	font-size:4em;
+	font-color:#F2F2F2；
+
+}
+footer p {
+	
+	margin-top:1em;
+	text-align: center;
+}
+
+
+
+
+.contain div{
+}
+
+.contain .popular-api {
+	width:100%;
+	margin:0 auto;
+	float:left;
+}
+.contain .popular-api .info-1 {
+	background-color:#F7F7F7;
+	width:100%;
+	height:38px;
+	font-size:25px;
+	line-height:18px;
+	
+	
+}
+.contain .popular-api .info-1 ul{
+	background-color:#09F;
+	width:5px;
+	height:35px;
+	display:inline-block;
+	float:left;
+}
+.contain .popular-api .info-1 p{
+	float:left;
+	margin-left:5px;
+	line-height:37px;
+}
+.contain .popular-api .info-2{
+	width:100%;
+}
+.contain .popular-api .info-3 div{
+	float: left;
+    background-color: #7FFFD4;
+    margin-top: 2% ;
+    margin-left: 0%;
+	margin-right:1%;
+    width: 24%;
+    height: 150px;
+}
+.contain .popular-api .info-1 ul{
+	background-color:#09F;
+	width:5px;
+	height:35px;
+	display:inline-block;
+	float:left;
+}
+.contain .popular-api .info-1 p{
+	float:left;
+	margin-left:5px;
+	line-height:37px;
+}
+.contain .popular-api .info-2{
+	width:100%;
+}
+.contain .popular-api .info-3 div{
+	float: left;
+    background-color: #7FFFD4;
+    margin-top: 2% ;
+    margin-left: 0%;
+	margin-right:1%;
+    width: 24%;
+    height: 150px;
+	margin-bottom:5%;
+}
+.contain .popular-data {
+
+	float:left;
+	width:100%;
+	margin:0 auto;
+}
+.contain .popular-data .info-1 {
+	background-color:#F7F7F7;
+	width:100%;
+	height:38px;
+	font-size:25px;
+	line-height:35px;
+	
+	
+}
+.contain .popular-data .info-1 ul{
+	background-color:#09F;
+	width:5px;
+	height:35px;
+	display:inline-block;
+	float:left;
+}
+.contain .popular-data .info-1 p{
+	float:left;
+	margin-left:5px;
+	line-height:37px;
+}
+.contain .popular- data.info-2{
+	width:100%;
+}
+.contain .popular-data .info-3 div{
+	float: left;
+    background-color: #7FFFD4;
+    margin-top: 2% ;
+    margin-left: 0%;
+	margin-right:1%;
+    width: 24%;
+    height: 150px;
+}
+.contain .popular-data .info-1 ul{
+	background-color:#09F;
+	width:5px;
+	height:35px;
+	display:inline-block;
+	float:left;
+}
+.contain .popular-data .info-1 p{
+	float:left;
+	margin-left:5px;
+	line-height:37px;
+}
+.contain .popular-data .info-2{
+	width:100%;
+}
+.contain .popular-data .info-3 div{
+	float: left;
+    background-color: #7FFFD4;
+    margin-top: 2% ;
+    margin-left: 0%;
+	margin-right:1%;
+    width: 24%;
+    height: 150px;
+}
+
+
+
+.classfiy {
+	background-color:#FBFBFB;
+	margin-top:20px;
+	margin-bottom:20px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:20px;
+
+}
+.classfiy ul{
+	padding-top:8px;
+	padding-left:5px;
+	padding-bottom:10px;
+	display:inline-block;
+	
+	}
+.classfiy ul li{
+	padding:5px 13px 5px 13px;
+	list-style:none;
+	margin-top:8px;
+	margin-left:15px;
+	margin-right:10px;
+	float:left;
+	text-align:center;
+}
+.classfiy ul .on{
+	background-color:#000;
+	color:#FFF;
+	border-width: 15px;	
+	border-width: 15px 5px 15px 5px;依次为上、右、下、左
+	border-style: solid;
+	border-radius: 15px;	//圆角的大小
+	border-color:#000;
+}
+.classfiy ul li:hover{
+	background-color:#000;
+	color:#FFF;
+	border-width: 15px;	
+	border-width: 15px 5px 15px 5px;依次为上、右、下、左
+	border-style: solid;
+	border-radius: 15px;	//圆角的大小
+	border-color:#000;
+	
+}
+.box{
+   min-height:900px;
+   margin-bottom:20px;
+   padding-top:50px;
+}
+.box .simple-info {
+	width:100%;
+	height:400px;
+  	background-color:#333;
+  
+}
+
+.box .simple-info .logo {
+	float:left;
+	margin-top:60px;
+	margin-left:110px;
+	width:100px;
+	height:100px;
+	background-color:#fff;
+
+}
+.box .simple-info .s-info1 {
+		float:left;
+	margin-top:60px;
+	margin-left:25px;
+}
+.box .simple-info .s-info1 ul{
+	
+}
+.box .simple-info .s-info1 .s-1 {
+	color:#FFF;
+	font-size:25px;
+}
+.box .simple-info .s-info1 .s-2 {
+		color:#FFF;
+	font-size:15px;
+	margin-top:10px;
+	
+	
+}
+.box .simple-info .s-info1 .s-2 li{
+	
+	float:left;
+	color:#0FF;
+	border:thin 2px #0FF;
+	margin-right:10px;
+}
+.box .simple-info .s-info1 .s-3 {
+	margin-top:35px;
+	color:#FFF;
+	font-size:15px;
+	overflow:hidden;
+	width:80%;
+	margin-:10px;
+	padding-top:5px;
+}
+.box .simple-info .s-info1 .s-4 {
+	margin-top:25px;
+	color:#FFF;
+	font-size:15px;
+	overflow:hidden;
+	
+}
+.box .simple-info .s-info1 .s-4 li{
+	border:thin #FFF;
+	width:60px;
+	height:30px;
+	float:left;
+	margin-right:20px;
+	line-height:30px;
+}
+.box .simple-info .s-info1 .s-5 {
+	margin-top:30px;
+	color:#FFF;
+	font-size:15px;
+	overflow:hidden;
+}
+.box .simple-info .s-info1 .s-5 li{ 
+	width:70px;
+	height:43px;
+	margin-right:13 px;
+	float:left;
+}
+.box .simple-info .s-info1 .s-6 {
+		margin-top:25px;
+	color:#FFF;
+}
+.box .simple-info .s-info1 .s-6 .insert {
+	border:none;
+	height:45px;
+	width:120px;
+	background-color:#0CC;
+	color:#FFF;
+}
+.box .simple-info .s-info1 .s-5 .price {
+}
+.box .simple-info .s-info1 .s-4 .select {
+	background-color:#0cc;
+	text-align:center;
+}
+.box .simple-info .s-info1 .s-5 .on {
+	font-size:20px;
+	display:none;
+}
+.box .main-info  {
+	float:left;
+	height:400px;
+	width:100%;
+}
+.notice-tit {
+            position: relative;
+            height:40px;
+			 background:#666;
+			
+        }
+        
+.notice-tit ul {
+	        margin-left:95px;
+            position: absolute;
+            width:100%;
+            left: -1px;
+            /* 当点击第一个导航栏标签时，左边边框会与大盒子的边框发生叠加，解决的方法利用定位让两个边框重合叠加在一起 */
+            height: 40px;
+            background:#666;
+            border-bottom: 1px solid #ddd;
+			font-size:16px;
+        }
+        
+.notice-tit ul li {
+	      
+            float: left;
+            width: 150px;
+            padding: 0 1px;
+            height: 40px;
+            text-align: center;
+            line-height:40px;
+            cursor: pointer;
+
+			
+        }
+.notice-tit ul li.selected {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            background: #fff;
+            padding: 0;
+            border-bottom: 1px solid #fff;
+        }
+	
+ .notice-con  div{
+	 margin-top:30px;
+	 margin-left:90px;
+	 height:400px;
+	 width:900px;
+     display: none;
+	 border:1px solid #999;
+	 font-size:24px;
+ }
+
+
+.box .main-info #notice-con div ul {
+	margin-top:20px;
+	margin-left:20px;
+	font-size:15px;
+}
+.box .main-info #notice-con div ul li {
+	color:#666;
+	padding-top:10px;
+	margin-top:3px;
+}
+table.gridtable {
+	margin-top:10px;
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 20px 10px 11px 12px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}

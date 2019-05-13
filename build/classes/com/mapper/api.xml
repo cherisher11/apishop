@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!-- 关于防sql注入 其中查阅#{}与${}的区别  发现#{}能有效防止sql注入，所以下面均使用#{} -->
+	<mapper namespace="com.mapper.apiMapper" >
+	    <insert id="addapi" parameterType="api_message" >
+		    INSERT INTO api (aname,address,request_parameter,parameter_message,request_ex,uid,check_message,test_message,cid,pic_path)
+		     VALUES(#{aname},#{address},#{request_parameter},#{parameter_message},#{request_ex},#{uid},#{check_message},#{test_message},#{cid},#{pic_path})   
+	    </insert>
+	    
+	    <delete id="deleteapi" parameterType="api_message"  >
+	        delete from api where aid= #{aid}   
+	    </delete>
+
+	    <update id="updateapi" parameterType="api_message" >
+	        update  api  set
+	       check_message=#{check_message},
+	       test_message=#{test_message}
+	        where aid= #{aid}  
+	    </update>
+	     <update id="shapi" parameterType="api_message" >
+	        update  api  set
+	       check_message=#{check_message}
+	        where aid= #{aid}  
+	    </update>
+	    <update id="csapi" parameterType="api_message" >
+	        update  api  set
+	       test_message=#{test_message}
+	        where aid= #{aid}  
+	    </update>
+	     <update id="update_cid" parameterType="api_message" >
+	        update  api  set
+	       cid=#{cid}
+	        where aid= #{aid}  
+	    </update>
+	      <update id="scpi_api" parameterType="api_message" >
+	        update  api  set
+	       pic_path=#{pic_path}
+	        where aid= #{aid}  
+	    </update>
+	    <select id="apilist" resultType="api_message" >
+	        select * from   api    
+	    </select>	
+	     <select id="getapi" parameterType="_int" resultType="api_message">
+	        select * from   api  where aid= #{aid}    
+	    </select>    
+	</mapper>

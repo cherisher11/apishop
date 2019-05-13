@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!-- 关于防sql注入 其中查阅#{}与${}的区别  发现#{}能有效防止sql注入，所以下面均使用#{} -->
+	<mapper namespace="com.mapper.roleMapper" >
+	    <insert id="addrole" parameterType="Role" >
+	        insert into role (rname,admin_power,check_power,test_power) values(#{rname},#{admin_power},#{check_power},#{test_power})     
+	    </insert>
+	    <delete id="deleterole" parameterType="Role"  >
+	        delete from role where rid= #{rid}   
+	    </delete>
+
+	    <update id="updaterole" parameterType="Role" >
+	        update  role  set
+	       check_power=#{check_power},
+	       test_power=#{test_power}
+	        where rid= #{rid}  
+	    </update>
+	    <select id="rolelist" resultType="Role" >
+	        select * from   role    
+	    </select>	
+	     <select id="getrole" parameterType="_int" resultType="Role">
+	        select * from   role  where rid= #{rid}    
+	    </select>    
+	</mapper>

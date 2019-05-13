@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!-- 关于防sql注入 其中查阅#{}与${}的区别  发现#{}能有效防止sql注入，所以下面均使用#{} -->
+	<mapper namespace="com.mapper.cMapper" >
+	    <insert id="addclassify" parameterType="classify" >
+	        insert into classify (cname) values(#{cname})     
+	    </insert>
+	    <delete id="deleteclassify" parameterType="classify"  >
+	        delete from classify where cid= #{cid}   
+	    </delete>
+
+	    <update id="updateclassify" parameterType="classify" >
+	        update  classify  set
+	       cname=#{cname}
+	        where cid= #{cid}  
+	    </update>
+	    <select id="clist" resultType="classify" >
+	        select * from   classify    
+	    </select>	
+	     <select id="getclassify" parameterType="_int" resultType="classify">
+	        select * from   classify  where cid= #{cid}    
+	    </select>    
+	</mapper>
